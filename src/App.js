@@ -14,7 +14,7 @@ export default function App() {
   const [height, setHeight] = useState(0);
 
   const toggleAccordion = ()=> {
-    setHeight(height === 0 ? 0 : content.current.scrollHeight );
+    setHeight(height === 0 ? content.current.scrollHeight  :0  );
   };
 
   useEffect(()=> {
