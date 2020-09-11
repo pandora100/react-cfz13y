@@ -4,7 +4,7 @@ import "./style.css";
 ///
 const Ul = styled.ul`
   height: ${({ height })=> height}px;
-  opacity: ${({ height })=> height > 0 ? 1 : 0};
+  opacity: ${({ height })=> height > 0 ? 1 : 0.1};
   overflow: hidden;
   transition: 0.1s ;
 `;
@@ -18,8 +18,9 @@ export default function App() {
   };
 
   useEffect(()=> {
+     console.log('content.current.scrollHeight:', content.current.scrollHeight);
     if (height > 0) {
-     console.log('content.current.scrollHeight:',content.current.scrollHeight)
+   
      setHeight(content.current.scrollHeight);
     }
   }, [list]);
