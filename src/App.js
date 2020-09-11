@@ -6,7 +6,7 @@ const Ul = styled.ul`
   height: ${({ height })=> height}px;
   opacity: ${({ height })=> height > 0 ? 1 : 0};
   overflow: hidden;;
-  transition: .5s;
+  
 `;
 export default function App() {
  const content = useRef(null);
