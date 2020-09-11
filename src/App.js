@@ -5,7 +5,7 @@ import "./style.css";
 const Ul = styled.ul`
   height: ${({ height })=> height}px;
   opacity: ${({ height })=> height > 0 ? 1 : 0};
-  overflow: hidden;;
+  overflow: hidden;
   
 `;
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
   const [height, setHeight] = useState(0);
 
   const toggleAccordion = ()=> {
-    setHeight(height === 0 ? content.current.scrollHeight : 0);
+    setHeight(height === 0 ? 0 : content.current.scrollHeight );
   };
 
   useEffect(()=> {
